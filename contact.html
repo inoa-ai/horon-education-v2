@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>お問い合わせ | 有限会社ホロンエデュケーション</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="app">
+      <section class="chunk subpage-hero">
+        <h1 class="section-title">お問い合わせ</h1>
+        <p class="section-desc">サービスに関するご質問や講師募集についてなど、お気軽にお問い合わせください</p>
+      </section>
+      
+      <section class="chunk content-section">
+        <div class="content-container">
+          <div style="text-align: center; margin-bottom: 3rem;">
+            <h2 style="border: none;">お電話でのお問い合わせ</h2>
+            <p style="font-size: 2rem; font-weight: 700; color: var(--text-main);">TEL. 045-252-5591</p>
+            <p>※受付時間: 平日 10:00 〜 18:00</p>
+          </div>
+
+          <form class="contact-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('デモ版のため送信されません。');">
+            <h3>メールフォーム</h3>
+            
+            <div class="form-group">
+              <label for="name">お名前 / 会社名 <span style="color:red;">*</span></label>
+              <input type="text" id="name" class="form-control" placeholder="例：山田 太郎 / 株式会社サンプル" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">メールアドレス <span style="color:red;">*</span></label>
+              <input type="email" id="email" class="form-control" placeholder="例：info@example.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="category">お問い合わせ種別 <span style="color:red;">*</span></label>
+              <select id="category" class="form-control" required>
+                <option value="">選択してください</option>
+                <option value="training">研修サービスについて</option>
+                <option value="university">大学向けサービスについて</option>
+                <option value="it">ITサポートについて</option>
+                <option value="recruit">講師応募について</option>
+                <option value="other">その他</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">お問い合わせ内容 <span style="color:red;">*</span></label>
+              <textarea id="message" class="form-control" placeholder="研修のご相談、講師応募の経歴などをご記入ください。" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="margin-top: 1rem;">送信する</button>
+          </form>
+        </div>
+      </section>
+    </div>
+    
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
